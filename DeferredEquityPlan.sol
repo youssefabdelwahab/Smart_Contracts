@@ -1,6 +1,5 @@
 pragma solidity ^0.5.0;
 
-// lvl 3: equity plan
 contract DeferredEquityPlan {
     uint fakenow = now;
     address human_resources;
@@ -8,15 +7,11 @@ contract DeferredEquityPlan {
     address payable employee; // bob
     bool active = true; // this employee is active at the start of the contract
 
-    // @TODO: Set the total shares and annual distribution
-    // Your code here!
     uint total_shares = 1000; 
     uint annual_distribution = 250;
 
-    uint start_time = fakenow; // permanently store the time this contract was initialized
+    uint start_time = fakenow; 
 
-    // @TODO: Set the `unlock_time` to be 365 days from now
-    // Your code here!
     uint unlock_time = fakenow ;
 
     uint public distributed_shares; // starts at 0
@@ -30,33 +25,21 @@ contract DeferredEquityPlan {
         require(msg.sender == human_resources || msg.sender == employee, "You are not authorized to execute this contract.");
         require(active == true, "Contract not active.");
 
-        // @TODO: Add "require" statements to enforce that:
-        // 1: `unlock_time` is less than or equal to `now`
-        // 2: `distributed_shares` is less than the `total_shares`
-        // Your code here!
         require(unlock_time <= fakenow , 'You cant get more shares at the moment'); 
         require(distributed_shares < total_shares , 'You are only allowed 1000 shares'); 
         
         uint shares = msg.value; 
         employee.transfer(shares);
 
-        // @TODO: Add 365 days to the `unlock_time`
-        // Your code here!
         unlock_time += 365 days;
 
-        // @TODO: Calculate the shares distributed by using the function (now - start_time) / 365 days * the annual distribution
-        // Make sure to include the parenthesis around (now - start_time) to get accurate results!
-        // Your code here!
         distributed_shares = ((fakenow - start_time) / 365 ) * annual_distribution; 
         
-
-        // double check in case the employee does not cash out until after 5+ years
         if (distributed_shares > 1000) {
             distributed_shares = 1000;
         }
     }
 
-    // human_resources and the employee can deactivate this contract at-will
     function deactivate() public {
         require(msg.sender == human_resources || msg.sender == employee, "You are not authorized to deactivate this contract.");
         active = false;
@@ -66,7 +49,6 @@ contract DeferredEquityPlan {
     //     fakenow += 100 days; 
     // }
 
-    // Since we do not need to handle Ether in this contract, revert any Ether sent to the contract directly
     function() external payable {
         revert("Do not send Ether to this contract!");
     }
