@@ -34,6 +34,25 @@ Open your ganache and copy and paste 3 child accounts one for each employee and 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # SMART CONTRACT 2 
 
 This contract is very similar to the first contract. The only difference is that it splits the Ether based on employee hierarchy. The higher the greater. Any remainder Ether will be sent to the employee with the highest status (Employee One) 
@@ -86,6 +105,37 @@ Open you ganache and copy 1 child account to be as the employee account. Make su
 # In this example i got an error when trying to send because 365 days did not pass. 
 
 ![](Screenshots/UsingContract2.gif)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
