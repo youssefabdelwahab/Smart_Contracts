@@ -104,7 +104,7 @@ Open you ganache and copy 1 child account to be as the employee account. Make su
 
 # In this example i got an error when trying to send because 365 days did not pass. 
 
-![](Screenshots/UsingContract2.gif)
+![](Screenshots/UsingContract3.gif)
 
 
 
