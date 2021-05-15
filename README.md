@@ -23,6 +23,9 @@ Inorder to deposit Ether to the employee accounts we have to initate a value tha
 
 This function has no name and is basically a fallback function. A fallback function is a function that we want to execute incase any the original function in the contract fails. In our case our fallback function does what the deposit function does. 
 
+
+Open your ganache and copy and paste 3 child accounts one for each employee and paste them for each address. Make sure you MetaMask wallet is connected to your local host
+
 ![](Screenshots/UsingContract1.gif)
 
 
@@ -77,6 +80,12 @@ This function switches active to false and this does not allow shares to be tran
 to test this: 
 
 uncomment the fastforward function in between deactivate  and external to fastforward in time aand see if you can deposit all the shares over time. After you finish testing it comment it out. 
+
+Open you ganache and copy 1 child account to be as the employee account. Make sure you MetaMask is connected to you local host. 
+
+# In this example i got an error when trying to send because 365 days did not pass. 
+
+![](Screenshots/UsingContract2.gif)
 
 
 
