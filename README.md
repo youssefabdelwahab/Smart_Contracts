@@ -109,6 +109,14 @@ Open you ganache and copy 1 child account to be as the employee account. Make su
 
 
 
+# Testnet contract addresses: 
+
+1 : 0xA4A5Ea7fCFf4bAab088F52DDd0436e4c9bFdC144
+
+2: 0x6B88d16D02D8A3c8f2Db79974bf8310b8E2692D1
+
+
+3: 0xe5D7E72aEe441a7194b6dCA6497C80606B05A20E
 
 
 
