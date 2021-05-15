@@ -23,7 +23,7 @@ Inorder to deposit Ether to the employee accounts we have to initate a value tha
 
 This function has no name and is basically a fallback function. A fallback function is a function that we want to execute incase any the original function in the contract fails. In our case our fallback function does what the deposit function does. 
 
-GIF 
+![](Screenshots/UsingContract1.gif)
 
 
 
