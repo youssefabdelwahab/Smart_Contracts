@@ -43,7 +43,7 @@ contract AssociateProfitSplitter {
         // Your code here!
         uint remainder = (msg.value - total);
     
-        msg.sender.transfer(remainder);
+        employee_one.transfer(remainder);
     }
 
     function() external payable {
@@ -66,6 +66,6 @@ contract AssociateProfitSplitter {
         // @TODO: take care of a potential remainder by sending back to HR (`msg.sender`)
         // Your code here!
         uint remainder = (msg.value - total);
-        msg.sender.transfer(remainder);
+        employee_one.transfer(remainder);
     }
 }
